@@ -1,0 +1,410 @@
+.dash-board {
+    margin-left: 80px;
+    margin-top: 60px;
+  }
+  
+  .warehouse {
+    padding: 20px;
+    font-family: "Poppins";
+  }
+  .add_pres{
+   display: flex;
+  }
+  .add_pres .search-bar-ecom {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .pres{
+    margin-top: 10px;
+  }
+  .shelf-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    gap: 20px;
+    border-radius: 15px;  
+    background-color: #f9f9f9; /* Subtle background color */
+    padding: 20px; /* Padding for better spacing */
+  }
+  
+  .shelf {
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for shelves */
+    padding: 15px; /* Padding inside shelf */
+    transition: transform 0.2s, box-shadow 0.3s; /* Smooth transition */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  .shelf:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  }
+  
+  .shelf-name {
+    background-color: #0353ff; /* Existing color */
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px; /* Padding for better text positioning */
+    font-size: 1.7rem; /* Increased font size */
+    font-weight: 600; /* Font weight for emphasis */
+    text-align: center; /* Center text alignment */
+  }
+  
+  .text{
+    font-weight: 600;
+  }
+  
+  .product-list-warehouse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); /* Scale effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  }
+  
+  .product-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+  }
+  
+  .view-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .product-details.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  
+  .product-details-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .product-details button {
+    margin-top: 20px;
+  }
+  
+  .available {
+    margin-left: 3px;
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+  }
+  
+  .out-of-stock {
+    margin-left: 3px;
+    padding: 3px 7px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: red;
+    color: white;
+  }
+  
+  /* Dark background overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .warehouse-head{
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: 40px;
+    margin-top: 10px;
+  }
+
+  
+  .cart-icon-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left:6px ;
+    padding-right: 6px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .cart {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    height: 100%;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+  }
+  
+  .cart.visible {
+    right: 0;
+  }
+  
+  .cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .close-cart-icon {
+    font-size: 24px; /* Size for the close icon */
+    background-color: red;
+    color: white; 
+    padding: 3px;/* Primary color for the icon */
+    cursor: pointer; 
+    border-radius: 15px;/* Pointer cursor on hover */
+    transition: color 0.3s; /* Smooth color transition */
+    margin-top: 6px;
+}
+
+.close-cart-icon:hover {
+    color:rgb(0, 0, 0); /* Darker color on hover for interaction feedback */
+}
+  
+  .ecom{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .search-bar-ecom{
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #4b4b4b;
+  
+    transition: all 0.3s ease;
+  }
+  /* Styles for the cart sidebar */
+  .cart {
+    position: fixed; /* Keeps the cart in a fixed position on the screen */
+    right: 0; /* Aligns the cart to the right */
+    top: 0; /* Aligns the cart to the top */
+    width: 400px; /* Adjusted width for a more compact look */
+    height: 100%; /* Full height of the viewport */
+    background-color: #fefefe; /* Slightly off-white for a softer look */
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    z-index: 100; /* Ensures the cart is on top of other elements */
+    padding: 20px; /* Padding for inner spacing */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    border-left: 2px solid #ececec; /* Subtle left border for separation */
+    border-radius: 10px 0 0 10px; /* Rounded left edges for a smoother look */
+}
+
+.cart.visible {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+ 
+  margin-bottom: 20px;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 80%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.cart-item-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.quantity-control button {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  top:5px
+}
+
+.close-cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-show {
+  position: fixed; /* Fix it to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center it perfectly */
+  width: 400px; /* Set a fixed width */
+  background-color: white; /* Background color */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+  border-radius: 10px; /* Smooth edges */
+  z-index: 1001; /* Ensure it's above other content */
+  opacity: 1; /* Full opacity */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.popup-show h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.popup-show p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.popup-show button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-show button:hover {
+  background-color: #0056b3;
+}

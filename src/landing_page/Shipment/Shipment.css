@@ -1,0 +1,196 @@
+
+
+/* Styling for the main dashboard container */
+.dashboard-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'Poppins'
+  }
+
+  .ship123{
+display: flex;
+flex-direction: row;
+
+  }
+  
+  /* General styling for content containers */
+  .dashboard-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    margin-bottom: 40px;
+  }
+  
+  /* Heading styles */
+  .dashboard-heading {
+    color: rgb(47, 47, 255);
+    text-align: center;
+    margin-bottom: 20px;
+   font-family: 'Poppins';
+
+  }
+  
+  .dashboard-subheading {
+    color: rgb(47, 47, 255);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form input styling */
+  .dashboard-input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Button styling */
+  .dashboard-button {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #4F46E5;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Error message styling */
+  .dashboard-error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  /* Table styling */
+  .dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .dashboard-table th, .dashboard-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .dashboard-table th {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .dashboard-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* QR Data display styling */
+  .dashboard-qr-data {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    
+    /* Modern styling */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+    /* Flexbox for alignment */
+    
+    
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.dashboard-qr-data:hover {
+    background-color: #e9ecef; /* Slightly darker on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.dashboard-qr-data .title {
+    font-weight: bold; /* Bold title */
+}
+
+.dashboard-qr-data .value {
+    font-weight: 500; /* Medium weight for value */
+    color: #2980b9; /* Accent color for values */
+}
+
+  .dashboard-qr-data p {
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  
+  /* Button to trigger QR scan */
+  .dashboard-scan-button {
+    background-color: #e67e22;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-scan-button:hover {
+    background-color: #d35400;
+  }
+  
+  /* Button to register the transaction */
+  .dashboard-register-button {
+    background-color: #27ae60;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-register-button:hover {
+    background-color: #2ecc71;
+  }
+  
+  .button-qr-scan{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    justify-content: space-between;
+  }

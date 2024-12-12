@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.dash-board{
+  margin-left: 80px;
+  margin-top: 60px;
+  font-family: 'Poppins';
+}
+.heading{
+    font-family: "Poppins";
+    
+}
+.info-section{
+    font-family: "Poppins";
+    color: grey;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-top: 10px;
+}
+.stats-info{
+    display: flex;
+    justify-content: space-between;
+}
+.box-stats{
+    height: 140px;
+    padding-top: 10px;
+    width: 236px;
+    background-color: rgb(196, 136, 253);
+     color: white;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight:600 ;
+    font-size:25px ;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgb(79, 0, 164);
+
+
+}
+
+.icon{
+    color: rgb(124, 1, 239);
+    font-size: 40px;
+  
+}
+.Stats-details{
+    justify-content: space-evenly;
+    align-items: center;
+display: flex;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100px;
+    aspect-ratio: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    display: grid;
+    background: #fff;
+    filter: blur(3px) contrast(7) hue-rotate(290deg);
+    mix-blend-mode: darken;
+  }
+  .loader:before{
+    content: "";
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #ff0000;
+    background: currentColor;
+    box-shadow: -30px 0,30px 0,0 30px, 0 -30px;
+    animation: l6 1s infinite alternate;
+  }
+  @keyframes l6{
+    90%,100% {box-shadow: -10px 0,10px 0,0 10px, 0 -10px;transform: rotate(180deg)}
+  }
+  .load {
+    display: flex;
+   
+    justify-content: center;
+    margin-top: 400px;
+  }
+  .loadd {
+    display: flex;
+   
+    justify-content: center;
+
+  }
+  .lding{
+    margin-top: 5px;
+    color: rgb(29, 116, 247);
+    font-family: 'Poppins';
+    font-size: 22px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  .bar-chart-container {
+    background-color: #f8f9fa; /* Light background for contrast */
+    width: 1009px;
+  
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing around the content */
+    margin: 20px 0; /* Space above and below the chart */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+ 
+  
+  
+  

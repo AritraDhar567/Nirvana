@@ -1,0 +1,275 @@
+/* General Styles */
+
+  .order-container {
+     /* Adjust based on the width of the Sidebar */
+    padding: 20px;
+    font-family: "Poppins";
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Orders Table */
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 12px 15px;
+   
+    text-align: left;
+  }
+  
+  .orders-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .orders-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Status Badge */
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .status.paid {
+    background-color: #28a745;
+  }
+  
+  .status.unpaid {
+    background-color: #dc3545;
+  }
+  
+  /* Action Buttons */
+  button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    color: #fff;
+    
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .print-button {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .print-button:hover {
+    background-color: #138496;
+  }
+  
+  .pay-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .pay-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Edit Order Modal */
+  
+  .edit-order-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+   
+  }
+  
+  .edit-order-modal h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .edit-order-modal label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .edit-order-modal input[type="text"],
+  .edit-order-modal input[type="number"],
+  .edit-order-modal select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .edit-order-modal .products-table {
+    margin-bottom: 20px;
+  }
+  
+  .edit-order-modal .products-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .edit-order-modal .products-table th,
+  .edit-order-modal .products-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: black;
+    text-align: left;
+  }
+  
+  .edit-order-modal .products-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .edit-order-modal .products-table td:last-child {
+    text-align: center;
+  }
+  
+  .edit-order-modal .modal-actions {
+    text-align: right;
+  }
+  
+  .edit-order-modal .modal-actions button {
+    padding: 10px 15px;
+    margin-left: 10px;
+  }
+  
+  .edit-order-modal .modal-actions button:first-child {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .edit-order-modal .modal-actions button:first-child:hover {
+    background-color: #218838;
+  }
+  
+  .edit-order-modal .modal-actions button:last-child {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .edit-order-modal .modal-actions button:last-child:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .orders-table, 
+    .edit-order-modal {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .orders-table th, 
+    .orders-table td, 
+    .edit-order-modal .products-table th, 
+    .edit-order-modal .products-table td {
+      padding: 10px;
+    }
+  
+    .modal-actions {
+      text-align: center;
+    }
+  
+    .modal-actions button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .add-pro{
+    background-color: #007bff;
+    color: white;
+  }
+  .add-print{
+    background-color: #007bff;
+    color: white;
+  }
+  .add-pay{
+    background-color:rgb(22, 189, 22);
+    color: white;
+  }
+  .add-save{
+    background-color: #007bff;
+    margin-left: 220px;
+    color: white;
+  }
+  .add-cancel{
+    background-color: red;
+    color: white;
+  }
+  @keyframes fadeInModal {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
