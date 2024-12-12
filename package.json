@@ -45,8 +45,8 @@
       "react-app",
       "react-app/jest"
     ],
-    "rules": }
-    "rule-name": "warn" // or "off"
+    "rules": {
+    "rule-name": "warn" 
       }
   },
   "browserslist": {
